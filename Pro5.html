@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>wowannima</title>
+</head>
+<!--DOM开始-->
+<body>
+111111<br>
+<img src="QQ图片.png" width="30%"><br>
+<a href="http://www.3dmgame.com/"><b>点点看</b></a><br>
+2222222
+<!--DOM开始-->
+<div id="d1">
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+</div>
+<script>
+    var para=document.createElement("p");
+    var node=document.createTextNode("This is new.");
+    para.appendChild(node);
+
+    var element=document.getElementById("d1");
+    element.appendChild(para);
+</script>
+<input type="button"
+       onclick="document.body.style.backgroundColor='lavender';"
+       value="改变背景色">
+</body>
+</html>
