@@ -1,3 +1,7 @@
 //app.js
 var http = require('http');
-var dengdengzaishuo = 1;
+
+http.createServer(function(request, response)) {
+    response.writeHead(200, {'Content-Type': 'text-plain'});
+    response.end('Hello World\n');
+}.listen(8124);
