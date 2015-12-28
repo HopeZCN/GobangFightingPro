@@ -17,3 +17,16 @@ eventEmitter.emit('connection');
 eventListeners = events.EventEmitter.listenerCount(eventEmitter,'connection');
 console.log('The number of listeners is ' + eventListeners);
 console.log('All finished!');
+
+var fs = require('fs');
+var data = 'wocacaca';
+var writeStream = fs.createWriteStream('docs/gtmd.txt');
+writeStream.write(data,'utf-8');
+writeStream.end();
+writeStream.on('finish',function() {
+    console.log('\nDo it!');
+});
+writeStream.on('error',function(err) {
+    console.log(err.stack);
+});
+console.log('\n\nPro finished.');
